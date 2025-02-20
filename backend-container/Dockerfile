@@ -1,2 +1,11 @@
 FROM nodejs:20 
-RUN  
+EXPOSE 8080
+RUN useradd expense 
+RUN mkdir /opt/app
+RUN chown expense:expense -R /opt/app
+WORKDIR /opt/app
+COPY package.json .
+COPY *.js .
+RUN npm install 
+CMD [ "nodejs","" ]
+
