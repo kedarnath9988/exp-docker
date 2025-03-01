@@ -7,4 +7,4 @@ dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 systemctl enable docker 
 systemctl start docker 
 usermod -aG docker ec2-user 
-echo -e "$R  logout and login $N" 
+echo -e "$R  logout and login $N"  

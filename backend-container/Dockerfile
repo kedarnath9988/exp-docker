@@ -1,4 +1,4 @@
-FROM nodejs:20 
+FROM node:20 
 EXPOSE 8080
 RUN useradd expense 
 RUN mkdir /opt/app
@@ -7,5 +7,5 @@ WORKDIR /opt/app
 COPY package.json .
 COPY *.js .
 RUN npm install 
-CMD [ "nodejs","" ]
+CMD [ "node","index.js" ]
 
