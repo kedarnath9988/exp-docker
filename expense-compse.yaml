@@ -1,5 +1,5 @@
 name:
-  version: 33.0
+  version: '3.8'
   network:
      default:
      name: expense 
