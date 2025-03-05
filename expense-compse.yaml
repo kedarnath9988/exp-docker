@@ -1,23 +1,20 @@
-name:
-  version: '3.8'
-  network:
-     default:
-     name: expense 
-  services:
-    mysql:
-      images: kedarnath9988/mysql:1.0
-      container_name: mysql
-    backend:
-      images: kedarnath9988/backend:1.0
-      container_name: backend
-      depends_on:
-        - mysql
-    frontend:
-      images: kedarnath9988/frontend:1.0
-      container_name: frontend
-      depends_on: 
-       - backend
-      expose:
-        - 80:80 
-
-  
+name: expense 
+network: 
+  default:
+    name: expense 
+services:
+  mysql:
+    image: kedarnath9988/mysql:1.0 
+    container_name: mysql 
+  backend:
+    image: kedarnath9988/backend:1.0 
+    container_name: backend 
+    depends_on: 
+      - mysql 
+  frontend:
+    image: kedarnath9988/frontend:1.0
+    container_name: frontend
+    depends_on: 
+      - backend
+    ports:
+      - "80:80"
