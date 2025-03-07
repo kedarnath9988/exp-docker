@@ -13,4 +13,9 @@ docker run -d --name backend --network backend:1.0
 docker network create expense 
 docker network ls 
 docker network remove expense 
-# 
+# Docker volumes 
+two types: 
+# named volumes
+if we specify in the yaml file it will creat autometically and the container will autometically utilize the volume 
+# unnamed Volumes 
+manually we have to creat the directory and nount to the continer explicitilly 

@@ -9,7 +9,8 @@ services:
     backend:
       image: kedarnath9988/backend:1.0 
       container_name: backend
-      command: sh -c "sleep 20 && node  /opt/app/index.js "
+      command: sh -c "sleep 20 && node  /opt/app/index.js " # make sure the mysql ready after that we are ready to run the backend container 
+      # so tht we are waiting here and then running the 
       depends_on:
         - mysql 
     frontend:
