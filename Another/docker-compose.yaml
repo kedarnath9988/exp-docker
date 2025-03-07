@@ -3,7 +3,7 @@ networks:
   default:
     name: expense 
 volumes:
-  expense:
+  expense: # -v expense
    external: true 
 services:
     mysql:
@@ -25,4 +25,4 @@ services:
       depends_on:
         - backend 
       expose:
-        - 80:80
+        - "80:80"
